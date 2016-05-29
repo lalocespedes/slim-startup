@@ -15,4 +15,6 @@ $capsule->addConnection([
 	'prefix'	=> $app->config->get('db.prefix'),
 ]);
 
+$capsule->setAsGlobal();
+
 $capsule->bootEloquent();

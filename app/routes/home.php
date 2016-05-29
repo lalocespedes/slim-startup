@@ -1,6 +1,6 @@
 <?php
 
-$app->get('/', function() use($app) {
+$app->get('/', $authenticated(), function() use($app) {
 
 	echo "Inicio";
 });

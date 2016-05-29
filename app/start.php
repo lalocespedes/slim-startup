@@ -41,6 +41,10 @@ require 'database.php';
 require 'filters.php';
 require 'routes.php';
 
+$app->db = function() {
+	return new Capsule;
+};
+
 $app->container->set('user', function() {
 	return new User;
 });

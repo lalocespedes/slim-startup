@@ -6,7 +6,7 @@ $authenticationCheck = function($required) use ($app) {
 
 		if ((!$app->auth && $required) || ($app->auth && !$required)) {
 			
-			$app->stop();
+			$app->redirect($app->urlFor('login'));
 		}
 	};
 };
